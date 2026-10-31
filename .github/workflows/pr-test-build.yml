@@ -1,7 +1,7 @@
 name: pr-test-build
 
 on:
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -23,3 +23,4 @@ jobs:
         run: |
           go build -o test-output ./cmd/server
           rm -f test-output
+

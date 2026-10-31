@@ -1,11 +1,7 @@
 name: translator-path-guard
 
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
+  workflow_dispatch:
 
 jobs:
   ensure-no-translator-changes:
@@ -26,3 +22,4 @@ jobs:
           echo "Changes under internal/translator are not allowed in pull requests."
           echo "You need to create an issue for our maintenance team to make the necessary changes."
           exit 1
+
